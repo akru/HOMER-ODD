@@ -9,8 +9,9 @@ import socket, os
 if __name__ == '__main__':
 #	sock = BluetoothSocket( RFCOMM )
 #	sock.connect((BLUETOOTH_ADDR, 1))
-    sock= socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.connect(('', 50007))
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.connect(('', 7777))
+    homer = HOMER(sock)
     while 1:
         os.system("fswebcam --no-banner --jpeg 40 -F 2 -S 1 -q shot.jpg")
         if face_detect("shot.jpg"):
