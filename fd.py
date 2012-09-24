@@ -26,7 +26,7 @@ def face_detect(image_file):
     frame = cv.LoadImage(image_file)
 
     # mirror
-    cv.Flip(frame, None, 1)
+    #cv.Flip(frame, None, 1)
 
     # face detection
     if detect(frame):
